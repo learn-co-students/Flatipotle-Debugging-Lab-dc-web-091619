@@ -43,7 +43,7 @@ const SideForm = (props) => {
               value="Chips & Guac"
               name="sides"
               checked={ props.sides.includes('Chips & Guac') }
-              onChange={ props.handleChange }
+              onChange={ (event) => props.handleChange(event) }
             />
             <img src={ require('../images/sides/chips-guac.png') } height="100px" width="100px" alt="chips and guac" />
             <label htmlFor="chips-guac">Chips & Guac</label>
@@ -58,7 +58,7 @@ const SideForm = (props) => {
               value="Chips & Queso"
               name="sides"
               checked={ props.sides.includes('Chips & Queso') }
-              onChange={ props.handleChange }
+              onChange={ (event) => props.handleChange(event) }
             />
             <img src={ require('../images/sides/chips-queso.png') } height="100px" width="100px" alt="chips and queso" />
             <label htmlFor="chips-queso">Chips & Queso</label>
@@ -113,3 +113,5 @@ const SideForm = (props) => {
     </Fragment>
   )
 }
+
+export default SideForm
